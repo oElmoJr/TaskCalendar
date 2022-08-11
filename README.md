@@ -3,6 +3,7 @@ para criar o Backend foi utilizado o node
 com o pacote express para gerenciar as rotas,
 o nodemon para observar as alterações no código e reiniciar o server.js,
 o mongodb para o banco de dados,
+uuid para gerenciar o id das tarefas
 
 ## Para iniciar o projeto:
 1. vá para o diretório Back-End 
