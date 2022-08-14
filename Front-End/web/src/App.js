@@ -4,7 +4,7 @@ import GlobvalStyles from "./styles/GlobvalStyles";
 function App() {
   return (
     <>
-      <Layout></Layout>
+      <Layout/>
       <GlobvalStyles/> 
     </>
   );
