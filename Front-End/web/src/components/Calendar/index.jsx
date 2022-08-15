@@ -9,7 +9,7 @@ import { TaskContext } from '../../contexts/TaskContexts';
 
 export default function FullCalendarApp({tasks}) {
 
-    const { handleNew } = useContext(TaskContext)
+    const { handleNew, handleTask } = useContext(TaskContext)
 
     return (
         <>
@@ -19,8 +19,7 @@ export default function FullCalendarApp({tasks}) {
               initialView="dayGridMonth"
               events={tasks}
               nowIndicator
-              dateClick={(e) => console.log(e.dateStr)}
-              eventClick={(e) => console.log(e.event.id)}
+              eventClick={(e) => handleTask(tasks, e.event.id)}
               height="800px"
               eventColor="#03be7a"
               

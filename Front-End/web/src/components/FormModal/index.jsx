@@ -11,6 +11,7 @@ import {
     FormContainer,
     FormMain,
     InputGroup,
+    DateTimeGroup,
     Footer
 } from "./styles"
 
@@ -20,12 +21,16 @@ export default function FormModal() {
         handleClose, 
         handleSubmit,
         titleHandler,
-        startHandler,
-        endHandler, 
+        startDateHandler,
+        startTimeHandler,
+        endDateHandler, 
+        endTimeHandler, 
         descriptionHandler, 
         title, 
-        start, 
-        end, 
+        startDate, 
+        startTime, 
+        endDate, 
+        endTime, 
         description
     } = useContext(TaskContext)
     
@@ -39,15 +44,21 @@ export default function FormModal() {
                     <FormMain>
                         <InputGroup>
                             <label htmlFor="title">Title</label>
-                            <input id="title" type="text" value={title} onChange={titleHandler}/>
+                            <input required id="title" type="text" value={title} onChange={titleHandler}/>
                         </InputGroup>
                         <InputGroup>
                             <label htmlFor="start">Inicial date</label>
-                            <input id="start" type="text" value={start} onChange={startHandler} />
+                            <DateTimeGroup>
+                                <input required id="start" type="date" value={startDate} onChange={startDateHandler} />
+                                <input id="start" className="time"  type="time" value={startTime} onChange={startTimeHandler} />
+                            </DateTimeGroup>
                         </InputGroup>
                         <InputGroup>
-                            <label htmlFor="end">End date</label>
-                            <input id="end" type="text" value={end} onChange={endHandler}/>
+                           <label htmlFor="end">End date</label>
+                            <DateTimeGroup>
+                                <input required id="end" type="date" value={endDate} onChange={endDateHandler}/>
+                                <input id="end" className="time" type="time" value={endTime} onChange={endTimeHandler}/>
+                            </DateTimeGroup>
                         </InputGroup>
                         <InputGroup>
                             <label htmlFor="description">Description</label>

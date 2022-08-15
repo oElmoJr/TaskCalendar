@@ -9,7 +9,7 @@ export const Overlay  = styled.div`
     backdrop-filter: blur(2px);
     
     position: fixed;
-    z-index: 1;
+    z-index: 9;
     top: 0;
     bottom: 0;
     left: 0;
@@ -84,6 +84,17 @@ export const InputGroup = styled.div`
         resize: none
     }
 `;
+
+export const DateTimeGroup = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    .time {
+        width: 150px;
+    }
+`;
+
 
 export const Footer = styled.div`
     display: flex;
