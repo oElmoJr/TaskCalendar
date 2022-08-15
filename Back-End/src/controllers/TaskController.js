@@ -13,18 +13,18 @@ module.exports = {
     },
 
     async store(request, response) {
-        const {title, initialDate, endDate} = request.body;
+        const {title, start, end} = request.body;
 
-        if (!title || !initialDate || !endDate)  {
-            return response.status(400).json({ error: "Missing title, initialDate or endDate." })
+        if (!title || !start || !end)  {
+            return response.status(400).json({ error: "Missing title, start or end." })
         }
         
         const task = new Task({
             _id: uuid(),
             title,
             description: "",
-            initialDate,
-            endDate,
+            start,
+            end,
         })
         
         try {
@@ -37,16 +37,16 @@ module.exports = {
     },
     
     async update(request, response) {
-        const {title, description, initialDate, endDate} = request.body;
+        const {title, description, start, end} = request.body;
         
-        if (!title && !description && !initialDate && !endDate)  {
-            return response.status(400).json({ error: "You must inform a new title, description, initialDate or endDate." })
+        if (!title && !description && !start && !end)  {
+            return response.status(400).json({ error: "You must inform a new title, description, start or end." })
         }
 
         if (title) response.Task.title = title
         if (description) response.Task.description = description;
-        if (initialDate) response.Task.initialDate = initialDate;
-        if (endDate) response.Task.endDate = endDate;
+        if (start) response.Task.start = start;
+        if (end) response.Task.end = end;
         
         try {
             await response.Task.save();

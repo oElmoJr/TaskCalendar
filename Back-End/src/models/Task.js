@@ -12,11 +12,11 @@ const taskSchema = new mongoose.Schema({
     description: {
         type: String
     },
-    initialDate: {
+    start: {
         type: String,
         required: true
     },
-    endDate: {
+    end: {
         type: String,
         required: true
     }

@@ -5,9 +5,9 @@ module.exports = {
     async validateId(request, response, next) {
         const { id } = request.params;
 
-        if (!isUuid(id)) {
-            return response.status(400).json({ error: "Invalid ID." })
-        }
+        // if (!isUuid(id)) {
+        //     return response.status(400).json({ error: "Invalid ID." })
+        // }
 
         try {
             const task = await Task.findById(id);
