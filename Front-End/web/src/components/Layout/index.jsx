@@ -1,41 +1,31 @@
-import React from "react";
-import Footer from "../Foother";
-import FullCalendarApp from "../Calendar";
+import React, { useEffect, useState } from "react";
 import Header from "../Header";
+import FullCalendarApp from "../Calendar";
+import Footer from "../Foother";
+import api from "../../services/api";
 
 import { Container } from "./styles"
 
 export default function Layout() {
+  const [tasks, setTasks] = useState([]); 
+  
+  useEffect(() => {
+    api.get("tasks").then(({data}) => {
+       
+    const mapped = data.tasks.map(({_id, title, start, end, description}) => ({
+      id: _id, title, start, end, description
+    }));
+
+    setTasks(mapped);
+    });
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  
     return (
         <Container>
             <Header/>
-            <FullCalendarApp tasks={[
-                {
-                  id: 1,
-                  title: 'event 1',
-                  start: '2022-08-14T10:00:00',
-                  end: '2022-08-14T12:00:00',
-                },
-                {
-                  id: 4,
-                  title: 'Entrega do projeto',
-                  start: '2022-08-16',
-                  end: '2022-08-16',
-                },
-                {
-                  id: 2,
-                  title: 'event 2',
-                  start: '2022-08-16T13:00:00',
-                  end: '2022-08-16T18:00:00',
-                },
-                { 
-                  id: 3, 
-                  title: 'event 3', 
-                  start: '2022-08-17', 
-                  end: '2022-08-20' 
-                },
-              ]}
-            />
+            <FullCalendarApp tasks={tasks} />
             <Footer/>
         </Container>
     )
