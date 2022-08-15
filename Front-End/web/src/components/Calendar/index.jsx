@@ -3,8 +3,14 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { Container } from './styles';
+import { useContext } from 'react';
+
+import { TaskContext } from '../../contexts/TaskContexts';
 
 export default function FullCalendarApp({tasks}) {
+
+    const { handleNew } = useContext(TaskContext)
+
     return (
         <>
           <Container>
@@ -21,7 +27,7 @@ export default function FullCalendarApp({tasks}) {
               customButtons={{
                   new: {
                   text: 'new task',
-                  click: () => console.log('new event'),
+                  click: handleNew,
                   },
               }}
               
