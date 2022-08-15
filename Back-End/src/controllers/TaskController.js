@@ -13,7 +13,7 @@ module.exports = {
     },
 
     async store(request, response) {
-        const {title, start, end} = request.body;
+        const {title, description, start, end} = request.body;
 
         if (!title || !start || !end)  {
             return response.status(400).json({ error: "Missing title, start or end." })
@@ -22,7 +22,7 @@ module.exports = {
         const task = new Task({
             _id: uuid(),
             title,
-            description: "",
+            description,
             start,
             end,
         })
