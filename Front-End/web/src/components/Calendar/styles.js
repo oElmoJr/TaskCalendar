@@ -34,4 +34,8 @@ export const Container = styled.div`
     .fc-toolbar-title { // calendar title
         font-weight: 500;
     }
+
+    .fc-event {
+        cursor: pointer !important;
+    }
 `;

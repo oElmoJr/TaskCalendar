@@ -3,9 +3,13 @@ import FormModal from "../components/FormModal";
 import TaskModal from "../components/TaskModal";
 import api from "../services/api"
 
+import {useAxios} from "../hooks/useAxios"
+
 export const TaskContext = createContext();
 
 export function TaskContextProvider({children}) {
+    const { data, mutate } = useAxios('tasks')
+
     const [openFormModal, setOpenFormModal] = useState(false);
     const [openTaskModal, setOpenTaskModal] = useState(false);
     
@@ -59,8 +63,23 @@ export function TaskContextProvider({children}) {
 
         if (id) {
             api.put(`tasks/${id}`, task);
+
+            // const updatedTaske = {
+            //     tasks: data.tasks?.map((task) => {
+            //         if(task._id === id) {
+            //             return { ...task, id, title, start, end, description }
+            //         };
+            //         return task;
+            //     }),
+            // };
+            // mutate(updatedTask, false);
         } else {
             api.post(`tasks`, task);
+
+            // const updatedTask = {
+            //     tasks: { ...data.tasks, task}
+            // }
+            // mutate(updatedTask, false);
         }
         
         handleClose()  
@@ -68,6 +87,12 @@ export function TaskContextProvider({children}) {
 
     function handleDelete(id) {
         api.delete(`tasks/${id}`)
+
+        const updatedTask = {
+            tasks: data.tasks?.filter((task) => task._id !== id)
+        };
+        mutate(updatedTask, false);
+
         handleClose()
     }
 
