@@ -16,8 +16,10 @@ o fullCalendar para criar o componente de calendário,
 3. no arquivo .env, atribua a url da database à variavel "DATABASE_URL" </br>
    se você não tiver a url da database, no README do meu perfil tem o link das minhas redes sociais, é só me pedir ^^. </br>
    ou você pode criar sua propria database.
-4. e use o comando 'yarn dev' ou 'npm run dev' no terminal para iniciar o Back-end
+4. use o comando 'yarn instal'
+5. e use o comando 'yarn dev' no terminal para iniciar o Back-end
 
 ### Frontend
 1. vá para o diretório Front-End/web
-2. e use o comando 'yarn start' ou 'npm run start' no terminal para iniciar o Front-end
+2. use o comando 'yarn instal'
+3. e use o comando 'yarn start' no terminal para iniciar o Front-end
