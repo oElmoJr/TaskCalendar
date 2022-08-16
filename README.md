@@ -23,3 +23,10 @@ o fullCalendar para criar o componente de calendário,
 1. vá para o diretório Front-End/web
 2. use o comando 'yarn instal'
 3. e use o comando 'yarn start' no terminal para iniciar o Front-end
+
+## Screenshots
+<img alt="Elmo-pic" src="https://media.discordapp.net/attachments/818979655046266882/1008964232957677608/Screenshot_2022-08-16_at_01-59-26_Task_Calendar.png">
+<img alt="Elmo-pic" src="https://media.discordapp.net/attachments/818979655046266882/1008964233284812860/Screenshot_2022-08-16_at_01-59-53_Task_Calendar.png">
+<img alt="Elmo-pic" src="https://media.discordapp.net/attachments/818979655046266882/1008964233632944188/Screenshot_2022-08-16_at_02-00-05_Task_Calendar.png">
+<img alt="Elmo-pic" src="https://media.discordapp.net/attachments/818979655046266882/1008964233951727706/Screenshot_2022-08-16_at_02-00-15_Task_Calendar.png">
+<img alt="Elmo-pic" src="https://media.discordapp.net/attachments/818979655046266882/1008964234266288148/Screenshot_2022-08-16_at_02-00-40_Task_Calendar.png">
