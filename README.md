@@ -1,7 +1,7 @@
 # Calendario-de-Tarefas
 Calendário de tarefas desenvolvido em React.Js no Frontend e Backend desenvolvido com Node.Js seguindo a arquitetura REST com integração ao banco de dados MongoDB.</br>
-Nele é possivel cadastrar uma nova tarefa em uma data e hora especifica ou em um conjunto de dias consecutivos,</br>
-é possivel também visualizar, editar e deletar uma tareda.</br>
+Nele é possível cadastrar uma nova tarefa em uma data e hora especifica ou em um conjunto de dias consecutivos,</br>
+é possível também visualizar, editar e deletar uma tarefa.</br>
 com visualização por mês, semana e dia.</br></br>
 
 
