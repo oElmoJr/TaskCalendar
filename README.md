@@ -7,9 +7,9 @@
 </P>
 
 <p align="center">
-   <a href="#funcionalidades">Funcionalidades</a> -
-   <a href="#tecnologias">Tecnologias</a> -
-   <a href="#testando">Testando</a> -
+   <a href="#funcionalidades">Funcionalidades</a> •
+   <a href="#tecnologias">Tecnologias</a> •
+   <a href="#testando">Testando</a> •
    <a href="#autor">Autor</a> 
 </p>
 
@@ -34,6 +34,7 @@ Foram usadas as seguintes tecnologias para o projeto:
    - [React.js](https://pt-br.reactjs.org/)
    - [Styled-Components](https://styled-components.com)
    - [FullCalendar](https://fullcalendar.io/)
+   - [Swr](https://swr.vercel.app/pt-BR)
 
 ## Preview
 <img alt="Preview Gif" src="./assets/images/Animação.gif">
