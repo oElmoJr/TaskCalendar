@@ -1,5 +1,6 @@
 <img src="./assets/images/header.png">
 
+
 <h1 align="center"> Calendario de Tarefas </h1>
 
 <p>
@@ -37,6 +38,7 @@ Foram usadas as seguintes tecnologias para o projeto:
    - [Swr](https://swr.vercel.app/pt-BR)
 
 ## Preview
+<img alt="Preview icon" src="https://media.discordapp.net/attachments/818979655046266882/1152372785000226968/79da61d8-b066-4f42-b5f2-d730c7ea9df1.png">
 <img alt="Preview Gif" src="./assets/images/Animação.gif">
 
 ## Testando
