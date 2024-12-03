@@ -38,8 +38,13 @@ Foram usadas as seguintes tecnologias para o projeto:
    - [Swr](https://swr.vercel.app/pt-BR)
 
 ## Preview
-<img alt="Preview icon" src="https://media.discordapp.net/attachments/818979655046266882/1152372785000226968/79da61d8-b066-4f42-b5f2-d730c7ea9df1.png">
+<img alt="Preview icon" src="https://i.ibb.co/Tqs7mxg/Icon.png">
 <img alt="Preview Gif" src="./assets/images/Animação.gif">
+<img alt="Preview web" src="https://i.ibb.co/w4RncPL/calendar-month-view.png">
+<img alt="Preview web" src="https://i.ibb.co/wSxh3mq/image.png">
+<img alt="Preview web" src="https://i.ibb.co/WH2XCcy/card-view-task.png">
+<img alt="Preview web" src="https://raw.githubusercontent.com/oElmoJr/TaskCalendar/main/assets/images/Anima%C3%A7%C3%A3o.gif">
+
 
 ## Testando
 **Pré-requisitos:** <br>
